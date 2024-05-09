@@ -1,0 +1,101 @@
+.movie-card{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 114px 93px 1fr;
+    grid-template-areas:
+      "image header header"
+      "image overview overview"
+      "image rate rate";
+    width: 500px;
+    height: 279px;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+    color: rgb(0, 0, 0);
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+    @media(max-width: 768px){
+        width: 388px;
+        height: 245px;
+        grid-template-columns: 90px 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "image header header"
+            "image header header"
+            "overview overview overview"
+            "rate rate rate";
+    }
+}
+.movie-card__info{
+    width: 268px;
+    padding:  12px 20px 0px 20px;
+}
+.movie-card__info h2{
+    margin: 0;
+}
+.movie-card__date{
+    color: #827E7E;
+    margin: 7px 0;
+}
+.spin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.movie-card__overview{
+    width: 228px;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-bottom: 0;
+    grid-area: overview;
+    @media(max-width:768px){
+        width: 367px;
+    }
+}
+
+.movie-card__Rate{
+    width: 239px;
+    height: 46px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-left: 40px;
+    grid-area: rate;
+    @media(max-width: 768px){
+        margin: 0px 80px;
+    }
+}
+.rate-circle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.movie-card__image{
+    width: 183px; 
+    height: 281px;
+    grid-area: image;
+    @media(max-width: 768px){
+        width: 80px;
+        height: 90px;
+    }
+}
+.movie-card__header{
+    grid-area: header;
+}
+
